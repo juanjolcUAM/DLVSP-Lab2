@@ -38,7 +38,7 @@ This guide is designed for its use on Ubuntu.
 7. Copy the video you want to use to the video (DLVSP-Lab2/video) folder, for example 'video.mp4'. Obtain the frames for the program by running 'video2img.py' and 'get_pkllist.py':
 ```
     python video2img.py -i video.mp4
-    python getpkllist.py
+    python get_pkllist.py
 ```
 8. Export the necessary folders for libraries
 9. Return to root folder and run 'yolo_seqnms.py' to generate output images in video/output:
