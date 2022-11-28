@@ -5,16 +5,15 @@ This guide is designed for its use on Ubuntu.
 
 # Steps
 
-1. Create a virtual environment with Python ver. 2.7. For this we will use conda:
+1. Create a virtual environment with Python ver. 2.7. We will use a conda environment, for more information on how to do that you can check https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html.
     - `conda create --name EnvironmentName python=2.7`
     - `conda activate EnvironmentName`
 2. Clone or download the project repository:
     - `git clone https://github.com/juanjolcUAM/DLVSP-Lab2`
 3. You may need to modify the `Makefile` in order for the program to properly compile and work in your machine:
-    - GPU=1 # 0 if your pc doesn't support CUDA. If you are going to execute in GPU be sure that the variables COMMON and LDFLAGS are pointing to your cuda installation folder. In this case they are pointing to `/usr/local/cuda-10.1/`
-    - CUDNN=0 # 1 if your pc does support CUDNN
-    - OPENCV=0 # 1 if your pc does support OPENCV
-
+    - GPU=1 or 0 if your pc doesn't support CUDA. If you are going to execute in GPU be sure that the variables COMMON and LDFLAGS are pointing to your cuda installation folder. In this case they are pointing to `/usr/local/cuda-10.1/`.
+    - CUDNN=0 or 1 if your pc does support CUDNN.
+    - OPENCV=0 or 1 if your pc does support OPENCV.
 4. Compile the project using `make`:
     - `cd DLVSP-Lab2`
     - `make`
