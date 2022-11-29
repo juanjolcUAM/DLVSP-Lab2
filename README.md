@@ -16,8 +16,8 @@ This guide is designed for its use on Ubuntu.
 ```
 3. You may need to modify the `Makefile` in order for the program to properly compile and work in your machine:
     - GPU=1, or 0 if your pc doesn't support CUDA. If you are going to execute in GPU be sure that the variables COMMON and LDFLAGS are pointing to your CUDA installation folder. In this case they are pointing to `/usr/local/cuda-10.1/`.
-    - CUDNN=0, or 1 if your pc does support CUDNN.
-    - OPENCV=0, or 1 if your pc does support OPENCV.
+    - CUDNN=1, or 0 if your pc does not support CUDNN.
+    - OPENCV=1, or 0 if your pc does not support OPENCV.
 4. Compile the project using `make`:
 ```
     cd DLVSP-Lab2
@@ -40,7 +40,7 @@ This guide is designed for its use on Ubuntu.
     python video2img.py -i video.mp4
     python get_pkllist.py
 ```
-8. Export the necessary folders for libraries
+8. Copy your libdarknet object and link files (`libdarknet.so` and `libdarknet.a`) to the library folder of your virtual environment. Using conda, you can know where the base environment folder is by executing `which python` while in the environment. Then the folder `./lib` would be the library folder.
 9. Return to root folder and run 'yolo_seqnms.py' to generate output images in video/output:
 ```
     python yolo_seqnms.py
