@@ -57,7 +57,7 @@ This guide is designed for its use on Ubuntu.
     python video2img.py -i video.mp4
     python get_pkllist.py
 ```
-9. Return to root folder and run 'yolo_seqnms.py' to generate output images in `DLVSP-Lab2/video/output`:
+9. Return to root folder and run `yolo_seqnms.py` to generate output images in `DLVSP-Lab2/video/output`:
 ```
     python yolo_seqnms.py
 ```
